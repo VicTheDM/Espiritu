@@ -1,13 +1,9 @@
 import { Component, OnInit, ViewChild, model } from '@angular/core';
-import { Carousel } from 'primeng/carousel';
 import { ImagesService } from '../../../../services/images.service';
-import { GalleriaModule  } from 'primeng/galleria';
-import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-galeria:not(g)',
   templateUrl: './galeria.component.html',
   styleUrls: ['./galeria.component.css'],
-  imports: [Carousel,CommonModule, GalleriaModule],
   providers: [ImagesService],
 })
 export class GaleriaComponent implements OnInit {

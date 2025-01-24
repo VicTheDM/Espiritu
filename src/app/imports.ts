@@ -10,7 +10,6 @@ import { CalendarModule } from 'primeng/calendar';
 import { DatePicker } from 'primeng/datepicker';
 import { Carousel } from 'primeng/carousel';
 import { CascadeSelect } from 'primeng/cascadeselect';
-import { ChartModule } from 'primeng/chart';
 import { Checkbox } from 'primeng/checkbox';
 import { Chip } from 'primeng/chip';
 import { ConfirmDialog } from 'primeng/confirmdialog';
@@ -22,8 +21,8 @@ import { Dialog } from 'primeng/dialog';
 import { DividerModule } from 'primeng/divider';
 import { DockModule } from 'primeng/dock';
 import { DrawerModule } from 'primeng/drawer';
-import { DragDropModule } from 'primeng/dragdrop';
 import { Select } from 'primeng/select';
+import { DynamicDialog } from 'primeng/dynamicdialog';
 import { DeferModule } from 'primeng/defer';
 import { EditorModule } from 'primeng/editor';
 import { FieldsetModule } from 'primeng/fieldset';
@@ -50,14 +49,11 @@ import { Message } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { MeterGroup } from 'primeng/metergroup';
-import { OrderList } from 'primeng/orderlist';
-import { OrganizationChartModule } from 'primeng/organizationchart';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { PaginatorModule } from 'primeng/paginator';
 import { PanelModule } from 'primeng/panel';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { PasswordModule } from 'primeng/password';
-import { PickList } from 'primeng/picklist';
 import { ProgressBar } from 'primeng/progressbar';
 import { RadioButton } from 'primeng/radiobutton';
 import { Rating } from 'primeng/rating';
@@ -102,10 +98,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { OverlayBadgeModule } from 'primeng/overlaybadge';
 
-import { ImagesService } from '../services/images.service'
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   imports: [
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
     AvatarModule,
     AvatarGroupModule,
     AnimateOnScrollModule,
@@ -122,7 +122,6 @@ import { ImagesService } from '../services/images.service'
     DatePicker,
     Carousel,
     CascadeSelect,
-    ChartModule,
     Checkbox,
     Chip,
     ColorPicker,
@@ -134,8 +133,8 @@ import { ImagesService } from '../services/images.service'
     DividerModule,
     DrawerModule,
     DockModule,
-    DragDropModule,
     Select,
+    DynamicDialog,
     DeferModule,
     EditorModule,
     FieldsetModule,
@@ -162,14 +161,11 @@ import { ImagesService } from '../services/images.service'
     MessagesModule,
     MultiSelectModule,
     MeterGroup,
-    OrganizationChartModule,
-    OrderList,
     OverlayPanelModule,
     PaginatorModule,
     PanelModule,
     PanelMenuModule,
     PasswordModule,
-    PickList,
     ProgressSpinner,
     ProgressBar,
     RadioButton,
@@ -210,6 +206,9 @@ import { ImagesService } from '../services/images.service'
     OverlayBadgeModule
   ],
   exports: [
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
     AvatarModule,
     AvatarGroupModule,
     AnimateOnScrollModule,
@@ -226,7 +225,6 @@ import { ImagesService } from '../services/images.service'
     DatePicker,
     Carousel,
     CascadeSelect,
-    ChartModule,
     Checkbox,
     Chip,
     ColorPicker,
@@ -239,8 +237,8 @@ import { ImagesService } from '../services/images.service'
     DrawerModule,
     DeferModule,
     DockModule,
-    DragDropModule,
     Select,
+    DynamicDialog,
     EditorModule,
     FieldsetModule,
     FileUpload,
@@ -265,14 +263,11 @@ import { ImagesService } from '../services/images.service'
     MessagesModule,
     MultiSelectModule,
     MeterGroup,
-    OrganizationChartModule,
-    OrderList,
     OverlayPanelModule,
     PaginatorModule,
     PanelModule,
     PanelMenuModule,
     PasswordModule,
-    PickList,
     ProgressSpinner,
     ProgressBar,
     RadioButton,
@@ -313,6 +308,6 @@ import { ImagesService } from '../services/images.service'
     AutoFocusModule,
     OverlayBadgeModule
   ],
-  providers: [ ImagesService ]
+  providers: [  ]
 })
 export class ImportsModule {}

@@ -1,10 +1,12 @@
-import { Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './components/views/Inicio/inicio.component';
 import { GaleriaComponent } from './components/views/Galeria/galeria.component';
 import { AcercaComponent } from './components/views/Acerca/acerca.component';
 import { ContactoComponent } from './components/views/Contacto/contacto.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 
 export const routes: Routes = [
     {path: '', pathMatch: 'full', redirectTo: 'inicio'},
@@ -16,3 +18,10 @@ export const routes: Routes = [
       {path: 'testingStuff',pathMatch: 'full',redirectTo: 'inicio'},
       {path: '**',component: InicioComponent,}, // Aqui iria el nofound page];
 ]
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+
+
+export class AppRoutingModule { }

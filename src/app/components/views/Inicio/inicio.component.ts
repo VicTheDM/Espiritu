@@ -5,7 +5,6 @@ import { ImagesService } from '../../../../services/images.service';
 @Component({
   selector: 'app-inicio:not(i)',
   templateUrl: './inicio.component.html',
-  imports: [Carousel],
   providers: [ImagesService],
   styleUrls: ['./inicio.component.css'],
 })
