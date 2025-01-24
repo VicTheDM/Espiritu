@@ -1,0 +1,41 @@
+
+<!-- Header-->
+<section class="py-5">
+<div class="container px-5 pb-5">
+    <div class="row gx-5 align-items-center">
+        <div class="col-xxl-3">
+            <!-- Header text content-->
+            <div class="text-center text-xxl-start">
+                <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Texto Texto TextoTexto TextoTexto</div></div>
+                <div class="fs-3 fw-light text-muted">Texto Texto Texto</div>
+                <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Texto Texto Texto Texto</span></h1>
+                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
+                    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Cursos</a>
+                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Retiros
+
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-9">
+            <!-- Header profile picture-->  
+            <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet" />
+            <link href="https://unpkg.com/quill@1.3.7/dist/quill.snow.css" rel="stylesheet" />
+            <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" autoplayInterval="3000">
+                <ng-template let-product #item>
+                    <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
+                        <div class="mb-4">
+                            <div class="relative mx-auto">
+                                <img src="{{ product.itemImageSrc }}" [alt]="product.title" style="max-width: 100%; height: 500px;" class="w-full rounded" />
+                            </div>
+                        </div>
+                        <div class="mb-4 font-medium">{{ product.title }}</div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+            <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
